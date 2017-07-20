@@ -1,0 +1,37 @@
+---
+title: "Avg. Distance of US Capitals from Each Other"
+author: "Faisal Hoda"
+date: "June 19, 2017"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+This presentation is a deliverable required for 'Developing Data Products' Course week 4 project on coursera.
+
+The application was built using Shiny: https://fhoda.shinyapps.io/wk4_project/
+
+Source code is at GitHub: https://github.com/mmonim/Coursera-Data-Products-Week-4-Project
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
