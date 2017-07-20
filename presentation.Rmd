@@ -33,7 +33,7 @@ capitals = read.csv("capitals.csv", header = TRUE)
 head(capitals)
 ```
 
-## Histogram
+## Sample of Histogram
 ```{r pressure}
 x    <- capitals$avg_distance
 hist(x, col = 'darkgray', border = 'white', 
