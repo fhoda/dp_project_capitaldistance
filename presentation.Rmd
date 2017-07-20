@@ -1,7 +1,7 @@
 ---
 title: "Avg. Distance of US Capitals from Each Other"
 author: "Faisal Hoda"
-date: "June 19, 2017"
+date: "July 20, 2017"
 output: slidy_presentation
 ---
 
@@ -11,27 +11,34 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Overview
 
-This presentation is a deliverable required for 'Developing Data Products' Course week 4 project on coursera.
+#### This presentation is a deliverable required for 'Developing Data Products' Course week 4 project on coursera.
+7/20/2017
 
-The application was built using Shiny: https://fhoda.shinyapps.io/wk4_project/
+- The application was built using Shiny: https://fhoda.shinyapps.io/wk4_project/
 
-Source code is at GitHub: https://github.com/mmonim/Coursera-Data-Products-Week-4-Project
+- Source code is on GitHub: https://github.com/fhoda/dp_project_capitaldistance
+  * `app.R` contains both server and ui code.
 
-## Slide with Bullets
+## About the App
+The application presents the average distance of capital cities from each other.
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Average distance for each capital from all other capitals was computed in `avg_dist_calculator.R`. 
+- Then the shiny library was used to plot a histogram on the resulting data.
+- The app allows users to change the bin size dynamically from 1-50.
 
-## Slide with R Output
-
+## Data
 ```{r cars, echo = TRUE}
-summary(cars)
+capitals = read.csv("capitals.csv", header = TRUE)
+
+head(capitals)
 ```
 
-## Slide with Plot
-
+## Histogram
 ```{r pressure}
-plot(pressure)
+x    <- capitals$avg_distance
+hist(x, col = 'darkgray', border = 'white', 
+           xlab = "Avg. Distances", 
+           main = "Histogram of Avg. Distances of US Capital Cities from each other"
+           )
 ```
 
